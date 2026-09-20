@@ -26,6 +26,7 @@
         node = mv.version "nodejs" "24.19.0";
         nixfmt = mv.version "nixfmt" "1.5.0";
         pre-commit = mv.version "pre-commit" "4.6.2";
+        act = mv.version "act" "0.2.89";
       in
       {
         devShells.default = pkgs.mkShell {
@@ -33,6 +34,7 @@
             node
             nixfmt
             pre-commit
+            act
           ];
         };
 
