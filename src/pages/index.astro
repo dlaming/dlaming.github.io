@@ -10,14 +10,14 @@ import ImageGlow from "../components/ImageGlow.astro";
 import Layout from "../layouts/Layout.astro";
 
 const [posts, projects, about, workExperience, quickInfo, socials] =
-	await Promise.all([
-		getCollection("posts", (post) => post.data.draft !== true),
-		getCollection("projects"),
-		getEntry("other", "about"),
-		getCollection("workExperience"),
-		getCollection("quickInfo"),
-		getCollection("socials"),
-	]);
+  await Promise.all([
+    getCollection("posts", (post) => post.data.draft !== true),
+    getCollection("projects"),
+    getEntry("other", "about"),
+    getCollection("workExperience"),
+    getCollection("quickInfo"),
+    getCollection("socials"),
+  ]);
 
 const { Content: About } = await render(about!);
 ---

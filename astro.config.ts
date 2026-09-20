@@ -1,8 +1,8 @@
 import mdx from "@astrojs/mdx";
 import node from "@astrojs/node";
 import sitemap from "@astrojs/sitemap";
-import { defineConfig } from "astro/config";
 import expressiveCode from "astro-expressive-code";
+import { defineConfig } from "astro/config";
 import spectre from "./package/src";
 import { spectreDark } from "./src/ec-theme";
 
@@ -17,6 +17,7 @@ const config = defineConfig({
 		sitemap(),
 		spectre({
 			name: "David Laming",
+			themeColor: "#22c55e",
 			openGraph: {
 				home: {
 					title: "David Laming",

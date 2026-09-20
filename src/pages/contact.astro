@@ -3,21 +3,23 @@ import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout
-  title="Contact"
-  description="Get in touch with me."
-  pagefindIgnore
->
+<Layout title="Contact" description="Get in touch with me." pagefindIgnore>
   <div class="contact-container">
     <Card>
       <div class="article-header" id="_top">
         <div class="header">
           <h1 class="no-mt article-h1">Contact</h1>
         </div>
-        <p class="contact-subtitle">Have a question or want to work together? Leave a message below.</p>
+        <p class="contact-subtitle">
+          Want to get in touch? Leave a message below.
+        </p>
       </div>
 
-      <form action="https://formspree.io/f/mvkgzeae" method="POST" class="contact-form">
+      <form
+        action="https://formspree.io/f/mvkgzeae"
+        method="POST"
+        class="contact-form"
+      >
         <div class="form-group">
           <label for="email">Email</label>
           <input type="email" id="email" name="email" required />
@@ -28,7 +30,9 @@ import Layout from "../layouts/Layout.astro";
           <textarea id="message" name="message" required rows="6"></textarea>
         </div>
 
-        <button type="submit" class="submit-btn">Send Message</button>
+        <button type="submit" class="submit-btn">
+          Send Message
+        </button>
       </form>
     </Card>
   </div>
@@ -72,7 +76,8 @@ import Layout from "../layouts/Layout.astro";
     font-weight: 500;
   }
 
-  input, textarea {
+  input,
+  textarea {
     background-color: #121212;
     border: 1px solid #353535;
     color: white;
@@ -80,7 +85,9 @@ import Layout from "../layouts/Layout.astro";
     border-radius: 6px;
     font-family: "Geist Mono", "Courier New", Courier, monospace;
     outline: none;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
     width: 100%;
   }
 
@@ -88,7 +95,8 @@ import Layout from "../layouts/Layout.astro";
     resize: vertical;
   }
 
-  input:focus, textarea:focus {
+  input:focus,
+  textarea:focus {
     border-color: var(--primary);
     box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.2);
   }
