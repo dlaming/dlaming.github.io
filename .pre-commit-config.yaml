@@ -13,9 +13,9 @@ repos:
         language: system
         files: \.(astro|md|mdx|yaml|yml)$
         pass_filenames: true
-      - id: nixpkgs-fmt
-        name: nixpkgs-fmt
-        entry: nixpkgs-fmt
+      - id: nixfmt
+        name: nixfmt
+        entry: nixfmt
         language: system
         types: [nix]
         pass_filenames: true

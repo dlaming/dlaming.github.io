@@ -7,8 +7,15 @@
     multiverse.url = "github:fzakaria/nixpkgs-multiverse";
   };
 
-  outputs = { self, nixpkgs, flake-utils, multiverse }:
-    flake-utils.lib.eachDefaultSystem (system:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      flake-utils,
+      multiverse,
+    }:
+    flake-utils.lib.eachDefaultSystem (
+      system:
       let
         pkgs = import nixpkgs {
           inherit system;

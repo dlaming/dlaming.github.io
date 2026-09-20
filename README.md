@@ -19,7 +19,7 @@ My personal site, built with [Astro](https://astro.build/) and the [Spectre](htt
 ```bash
 nix develop
 pre-commit install
-npm install
+npm install --legacy-peer-deps
 npm run dev
 ```
 

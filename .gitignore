@@ -30,3 +30,5 @@ pnpm-debug.log*
 
 # Pagefind (generated at build time)
 public/pagefind/
+
+.direnv/
