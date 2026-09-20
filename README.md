@@ -4,29 +4,32 @@ My personal site, built with [Astro](https://astro.build/) and the [Spectre](htt
 
 ## Content
 
-| What | Where |
-|------|-------|
-| Blog posts | `src/content/posts/` |
-| Projects | `src/content/projects/` |
-| Bio & about | `src/content/info.json` |
-| Social links | `src/content/socials.json` |
-| Work experience | `src/content/work.json` |
-| Tags | `src/content/tags.json` |
-| Profile picture | `src/assets/pfp.png` |
+| What            | Where                      |
+| --------------- | -------------------------- |
+| Blog posts      | `src/content/posts/`       |
+| Projects        | `src/content/projects/`    |
+| Bio & about     | `src/content/info.json`    |
+| Social links    | `src/content/socials.json` |
+| Work experience | `src/content/work.json`    |
+| Tags            | `src/content/tags.json`    |
+| Profile picture | `src/assets/pfp.png`       |
 
 ## Local development
 
 ```bash
-pnpm install
-pnpm run dev
+nix develop
+pre-commit install
+npm install
+npm run dev
 ```
 
 ## Build
 
 ```bash
-pnpm run build
-pnpm run preview   # preview the production build
+npm run build
+npm run preview
 ```
+
 ## Deployment
 
 Pushes to `main` auto-deploy to GitHub Pages via GitHub Actions.

@@ -17,14 +17,15 @@
         mv = multiverse.multiverse.${system};
 
         node = mv.version "nodejs" "24.19.0";
-        npm = mv.version "pnpm" "11.27.0";
+        nixfmt = mv.version "nixfmt" "1.5.0";
+        pre-commit = mv.version "pre-commit" "4.6.2";
       in
       {
         devShells.default = pkgs.mkShell {
           buildInputs = [
             node
-            pnpm
-            git
+            nixfmt
+            pre-commit
           ];
         };
 
