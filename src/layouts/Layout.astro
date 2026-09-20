@@ -89,11 +89,16 @@ const { title, description, image, pagefindIgnore, article } = Astro.props;
   <body>
     <main data-pagefind-ignore={pagefindIgnore}>
       <Navbar />
-      <LayoutGrid>
-        <slot name="left" slot="left" />
-        <slot name="right" slot="right" />
-      </LayoutGrid>
+      {
+        (Astro.slots.has("left") || Astro.slots.has("right")) && (
+          <LayoutGrid>
+            <slot name="left" slot="left" />
+            <slot name="right" slot="right" />
+          </LayoutGrid>
+        )
+      }
       <slot name="404" />
+      <slot />
     </main>
     <Background />
   </body>
