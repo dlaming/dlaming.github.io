@@ -88,7 +88,17 @@ const projects = defineCollection({
 		}),
 });
 
+
+const credentials = defineCollection({
+	loader: file("src/content/credentials.json"),
+	schema: z.object({
+		id: z.string(),
+		name: z.string().optional(),
+	}),
+});
+
 export const collections = {
+	credentials,
 	tags,
 	posts,
 	projects,

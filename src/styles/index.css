@@ -93,3 +93,10 @@
 	gap: 0.75rem;
 	align-items: center;
 }
+
+.credentials-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	margin-top: 1rem;
+}
